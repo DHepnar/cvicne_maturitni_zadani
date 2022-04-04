@@ -5,4 +5,5 @@ dotenv.config();
 module.exports = {
     port: process.env.PORT,
     hostname: process.env.HOSTNAME,
+    secret: process.env.SECRET,
 };

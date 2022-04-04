@@ -2,6 +2,7 @@ const path = require('path');
 
 const bcrypt = require("bcrypt");
 const jsondb = require('simple-json-db');
+const { debug } = require('console');
 
 const db = new jsondb(path.join(__dirname, '..', '..', '..', 'data', 'uzivatele.json'));
 
@@ -15,3 +16,16 @@ exports.pridat = (jmeno, heslo) => {
         heslo: hash,
     });
 };
+
+exports.overit = (jmeno, heslo) => {
+    let uzivatel = db.get(jmeno);
+    let hash = uzivatel.heslo;
+
+    return bcrypt.compareSync(heslo, hash);
+
+};
+
+exports.nacist = (jmeno) => {
+    return db.get(jmeno);  
+};
+
