@@ -8,6 +8,7 @@ const app = express();
 const { secret } = require(path.join(__dirname, '..', 'config'));
 
 const uzivatelRouter = require(path.join(__dirname, 'routers', 'uzivatelRouter.js'));
+const prispevekRouter = require(path.join(__dirname, 'routers', 'prispevekRouter.js'));
  
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +25,7 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'www'))); 
  
-app.use('/uzivatel', uzivatelRouter);  
+app.use('/uzivatel', uzivatelRouter); 
+app.use('/prispevky', prispevekRouter);
 
 module.exports = app;

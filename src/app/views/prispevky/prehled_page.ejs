@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje příspěvky</title>
+    <script src="/js/lib/jquery.js"></script>
+    <script src="/js/prehled.js"></script>
+</head>
+<body>
+    <h1>Moje příspěvky</h1>
+    
+    <% if(prispevky.lenght == 0) { %>
+        <p><b>Dosud nemáte žádné příspěvky.</b></p>
+    <% } else { %>
+        <% for(let i in prispevky) { %>
+            <p><b><%= prispevky[i].nadpis %></b></p>
+
+        <% } %>
+    <% } %>
+
+    <a href="/uzivatel/profil_page">Zpět na profil</a>
+</body>
+</html>
