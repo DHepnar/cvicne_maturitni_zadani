@@ -11,6 +11,7 @@ router.get('/registrovat_page', controller.zobrazRegistrovat_page);
 router.post('/registrovat', controller.registrovat);
 router.post('/prihlasit', controller.prihlasit);
 router.get('/profil_page', controller.zobrazProfil_page);
+router.get('/odhlasit', controller.odhlasit);
  
 
 module.exports = router;

@@ -62,3 +62,12 @@ exports.zobrazProfil_page = (dotaz, odpoved) => {
         uzivatel: dotaz.session.uzivatel,
     });
 };
+
+exports.odhlasit = (dotaz, odpoved) => {
+    dotaz.session.destroy();
+    
+    return odpoved.json({
+        uspech: true,
+        url: '/uzivatel/prihlasit_page',
+    });
+};
