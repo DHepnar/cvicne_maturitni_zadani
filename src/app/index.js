@@ -22,7 +22,7 @@ app.use(session({
     cookie: { sameSite: 'strict'},
 }));
 
-app.use(express.static(path.join(__dirname, '..', 'public'))); 
+app.use(express.static(path.join(__dirname, 'www'))); 
  
 app.use('/uzivatel', uzivatelRouter);  
 
