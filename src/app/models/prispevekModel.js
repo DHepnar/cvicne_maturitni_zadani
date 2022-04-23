@@ -2,7 +2,7 @@ const path = require('path');
 
 const jsondb = require('simple-json-db');
 
-const db = new jsondb(path.join(__dirname, '..', '..', '..', 'data', 'prispevky.json'))
+const db = new jsondb(path.join(__dirname, '..', '..', '..', 'data', 'prispevky.json'));
 
 if(!db.has('next_id')) {
     db.set('next_id', 1);
