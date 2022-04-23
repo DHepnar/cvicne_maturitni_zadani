@@ -13,6 +13,14 @@ exports.zobrazPrehled_page = (dotaz, odpoved) => {
 
     });
 };
+
+exports.zobrazVerejne_page = (dotaz, odpoved) => {
+    let prispevky = model.nacistVerejne();
+
+    odpoved.render('prispevky/verejne_page', {
+       prispevky, 
+    });
+};
 exports.zobrazDetail_page = (dotaz, odpoved) => {
     let id = dotaz.params.id;
     let prihlaseny = dotaz.session.uzivatel;

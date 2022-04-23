@@ -3,7 +3,8 @@
         "nadpis": "dasaedsadsas",
         "telo": "dasdadad",
         "autor": "Dominik",
-        "id": "7"
+        "id": "7",
+        "verejny": true
     },
     "8": {
         "nadpis": "standuv prispevek",

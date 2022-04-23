@@ -47,3 +47,24 @@ exports.nacistJeden = (id) => {
 exports.smazat = (id) => {
     db.delete(id);
 };
+
+exports.zverejnit = (id) => {
+    let prispevek = db.get(id);
+
+    prispevek.verejny = true;
+
+    db.set(id, prispevek);
+};
+
+exports.nacistVerejne = () => {
+    let vysledek = [];
+
+    let data = db.JSON();
+
+    for(let id in data) {
+        if(data[id].verejny) {
+            vysledek.push(data[id]);
+        }
+    }
+    return vysledek;
+};

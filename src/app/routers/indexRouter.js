@@ -10,7 +10,11 @@ router.get([
     '/index.html',
 
 ],(dotaz, odpoved) => {
-    odpoved.redirect('/uzivatel/profil_page');
+    if(!controller.prihlaseny(dotaz)){
+        odpoved.redirect('/prispevky/verejne_page')
+    } else {
+        odpoved.redirect('/uzivatel/profil_page');
+    } 
 });
 
 router.get([

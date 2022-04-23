@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Veřejné příspěvky</title>
+</head>
+<body>
+    <h1>Veřejné příspěvky</h1>
+    <a href="/uzivatel/registrovat_page">Registrujte se a pište příspěvky také!</a>
+       <% for(let i in prispevky) { %>
+            <p>
+                <a href="/prispevky/detail_page/<%= prispevky[i].id %>">Detail</a>
+                <b><%= prispevky[i].nadpis %></b> 
+                <i>(<%= prispevky[i].autor %>)</i>
+            </p>  
+       <% } %>
+ 
+</body>
+</html>

@@ -13,6 +13,9 @@ router.get('/pridat_page', controller.zobrazPridat_page);
 
 router.get('/prehled_page', controller.zobrazPrehled_page);
 
+router.get('/zverejnit/:id', controller.zverejnit);
+router.get('/verejne_page', controller.zobrazVerejne_page);
+
 router.post('/pridat', controller.pridat);
 
 module.exports = router;

@@ -18,8 +18,12 @@
                 <a href="/prispevky/detail_page/<%= prispevky[i].id %>">Detail</a>
                 <b><%= prispevky[i].nadpis %></b>
                 <a href="/prispevky/smazat/<%= prispevky[i].id %>">Smazat</a>
-                <a href="/prispevky/zverejnit/<%= prispevky[i].id %>">Zveřejnit</a>
-            </p>
+                <% if(prispevky[i].verejny) { %>
+                    <i>Zveřejněný</i>
+                <% } else { %>
+                    <a href="/prispevky/zverejnit/<%= prispevky[i].id %>">Zveřejnit</a>
+                <% } %>
+                </p>
             
 
         <% } %>
