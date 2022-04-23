@@ -43,3 +43,7 @@ exports.nacistJeden = (id) => {
 
     return prispevek;
 };
+
+exports.smazat = (id) => {
+    db.delete(id);
+};

@@ -35,3 +35,11 @@ exports.pridat = (dotaz, odpoved) => {
         url: '/prispevky/prehled_page',
     });
 };
+
+exports.smazat = (dotaz, odpoved) => {
+let id = dotaz.params.id;
+
+    model.smazat(id);
+
+    odpoved.redirect('/prispevky/prehled_page');
+};

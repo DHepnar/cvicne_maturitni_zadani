@@ -2,12 +2,8 @@
     "1": {
         "nadpis": "prispevek",
         "telo": "adasdasda",
-        "autor": "Dominik"
-    },
-    "2": {
-        "nadpis": "prispevek2",
-        "telo": "adsdasdadadxda",
-        "autor": "Dominik"
+        "autor": "Dominik",
+        "id": "1"
     },
     "3": {
         "nadpis": "prispevek3",
