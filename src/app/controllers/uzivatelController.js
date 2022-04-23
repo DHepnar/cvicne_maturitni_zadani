@@ -23,7 +23,7 @@ exports.registrovat = (dotaz, odpoved) => {
 
     return odpoved.json({
         uspech:true,
-        url: '/uzivatel/prihlaseni_page',
+        url: '/uzivatel/prihlasit_page',
     });
 };
 
@@ -70,4 +70,8 @@ exports.odhlasit = (dotaz, odpoved) => {
         uspech: true,
         url: '/uzivatel/prihlasit_page',
     });
+};
+
+exports.prihlaseny = (dotaz) => {
+    return(dotaz.session.uzivatel);
 };

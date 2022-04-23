@@ -15,7 +15,12 @@ exports.zobrazPrehled_page = (dotaz, odpoved) => {
 };
 exports.zobrazDetail_page = (dotaz, odpoved) => {
     let id = dotaz.params.id;
+    let prihlaseny = dotaz.session.uzivatel;
+    let autor = model.nacistJeden(id).autor;
 
+    if(prihlaseny != autor) {
+        return odpoved.redirect('/prispevky/prehled_page');
+    }
     let prispevek = model.nacistJeden(id);
 
     odpoved.render('prispevky/detail_page', {
@@ -37,9 +42,25 @@ exports.pridat = (dotaz, odpoved) => {
 };
 
 exports.smazat = (dotaz, odpoved) => {
-let id = dotaz.params.id;
-
-    model.smazat(id);
+    let id = dotaz.params.id;
+    let prihlaseny = dotaz.session.uzivatel;
+    let autor = model.nacistJeden(id).autor;
+    if(prihlaseny == autor) {
+        model.smazat(id);
+    }
 
     odpoved.redirect('/prispevky/prehled_page');
+};
+
+exports.zverejnit = (dotaz, odpoved) => {
+    let id = dotaz.params.id;
+    let prihlaseny = dotaz.session.uzivatel;
+    let autor = model.nacistJeden(id).autor;
+
+    if(prihlaseny == autor) {
+        model.zverejnit(id);
+
+    }
+
+    odpoved.redirect('/prispevky/prehled_page')
 };

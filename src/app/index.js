@@ -7,6 +7,7 @@ const app = express();
 
 const { secret } = require(path.join(__dirname, '..', 'config'));
 
+const indexRouter = require(path.join(__dirname, 'routers', 'indexRouter.js'));
 const uzivatelRouter = require(path.join(__dirname, 'routers', 'uzivatelRouter.js'));
 const prispevekRouter = require(path.join(__dirname, 'routers', 'prispevekRouter.js'));
  
@@ -27,6 +28,7 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'www'))); 
  
+app.use('/', indexRouter);
 app.use('/uzivatel', uzivatelRouter); 
 app.use('/prispevky', prispevekRouter);
 

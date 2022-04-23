@@ -1,14 +1,14 @@
 {
-    "1": {
-        "nadpis": "prispevek",
-        "telo": "adasdasda",
+    "7": {
+        "nadpis": "dasaedsadsas",
+        "telo": "dasdadad",
         "autor": "Dominik",
-        "id": "1"
+        "id": "7"
     },
-    "3": {
-        "nadpis": "prispevek3",
-        "telo": "jooooooooooo",
-        "autor": "Dominik"
+    "8": {
+        "nadpis": "standuv prispevek",
+        "telo": "adadada",
+        "autor": "Standa"
     },
-    "next_id": 4
+    "next_id": 9
 }
