@@ -12,6 +12,7 @@ router.post('/registrovat', controller.registrovat);
 router.post('/prihlasit', controller.prihlasit);
 router.get('/profil_page', controller.zobrazProfil_page);
 router.get('/odhlasit', controller.odhlasit);
+router.get('/', controller.zobrazRegistrovat_page);
 
  
 

@@ -14,6 +14,7 @@
         <p><b>Dosud nemáte žádné příspěvky.</b></p>
     <% } else { %>
         <% for(let i in prispevky) { %>
+            <a href="/prispevky/detail_page/<%= prispevky[i].id %>">Detail</a>
             <p><b><%= prispevky[i].nadpis %></b></p>
 
         <% } %>

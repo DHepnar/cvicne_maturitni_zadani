@@ -13,6 +13,16 @@ exports.zobrazPrehled_page = (dotaz, odpoved) => {
 
     });
 };
+exports.zobrazDetail_page = (dotaz, odpoved) => {
+    let id = dotaz.params.id;
+
+    let prispevek = model.nacistJeden(id);
+
+    odpoved.render('prispevky/detail_page', {
+        prispevek,
+    });
+    
+};
 exports.pridat = (dotaz, odpoved) => {
     let nadpis = dotaz.body.nadpis;
     let telo = dotaz.body.telo;

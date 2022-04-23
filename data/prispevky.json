@@ -9,5 +9,10 @@
         "telo": "adsdasdadadxda",
         "autor": "Dominik"
     },
-    "next_id": 3
+    "3": {
+        "nadpis": "prispevek3",
+        "telo": "jooooooooooo",
+        "autor": "Dominik"
+    },
+    "next_id": 4
 }

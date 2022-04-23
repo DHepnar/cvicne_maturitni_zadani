@@ -28,9 +28,18 @@ exports.nacistVsechny = (autor) => {
 
     for(let id in data) {
         if(data[id].autor == autor) {
+            data[id].id = id;
             vysledek.push(data[id]);
         }
     }
 
     return vysledek;
+};
+
+exports.nacistJeden = (id) => {
+    let prispevek = db.get(id);
+
+    prispevek.id = id;
+
+    return prispevek;
 };

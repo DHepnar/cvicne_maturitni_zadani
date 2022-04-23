@@ -13,6 +13,8 @@ const prispevekRouter = require(path.join(__dirname, 'routers', 'prispevekRouter
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+app.get('/', (dotaz, odpoved) => odpoved.redirect('/uzivatel'));
+
 app.use(express.json());
 
 app.use(session({
